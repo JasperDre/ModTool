@@ -86,7 +86,18 @@ namespace ModTool.Shared
                 return _unityVersion;
             }
         }
-        
+
+        /// <summary>
+        /// Filepath to the thumbnail.
+        /// </summary>
+        public string thumbnail
+        {
+            get
+            {
+                return _thumbnail;
+            }
+        }
+
         /// <summary>
         /// Should this mod be enabled.
         /// </summary>
@@ -123,6 +134,9 @@ namespace ModTool.Shared
         private string _unityVersion;
 
         [SerializeField]
+        private string _thumbnail;
+
+        [SerializeField]
         private ModPlatform _platforms;
 
         [SerializeField]
@@ -140,6 +154,7 @@ namespace ModTool.Shared
         /// <param name="platforms">The Mod's supported platforms.</param>
         /// <param name="content">The Mod's available content types.</param>
         /// <param name="version">The Mod's version</param>
+        /// <param name="unityVersion"> The Mod's thumbnail.</param>
         /// <param name="unityVersion"> The version of Unity that the Mod was exported with.</param>
         public ModInfo(
             string name,
@@ -147,6 +162,7 @@ namespace ModTool.Shared
             string description,
             string version,
             string unityVersion,
+            string thumbnail,
             ModPlatform platforms,
             ModContent content)
         {
@@ -156,6 +172,7 @@ namespace ModTool.Shared
             _platforms = platforms;
             _content = content;
             _version = version;
+            _thumbnail = thumbnail;
             _unityVersion = unityVersion;
 
             isEnabled = false;

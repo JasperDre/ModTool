@@ -54,6 +54,17 @@ namespace ModTool.Exporting.Editor
         }
 
         /// <summary>
+        /// The Mod's thumbnail.
+        /// </summary>
+        public new string thumbnail
+        {
+            get
+            {
+                return _thumbnail;
+            }
+        }
+
+        /// <summary>
         /// The selected platforms for which this mod will be exported.
         /// </summary>
         public ModPlatform platforms
@@ -97,6 +108,9 @@ namespace ModTool.Exporting.Editor
 
         [SerializeField]
         private string _version;
+
+        [SerializeField]
+        private string _thumbnail;
 
         [SerializeField]
         private ModPlatform _platforms = (ModPlatform)(-1);
