@@ -14,6 +14,7 @@ namespace ModTool.Exporting.Editor
         private SerializedProperty _platforms;
         private SerializedProperty _content;
         private SerializedProperty _outputDirectory;
+        private SerializedProperty _thumbnailDirectory;
 
         private FilteredEnumMaskField platforms;
         private FilteredEnumMaskField content;
@@ -27,6 +28,7 @@ namespace ModTool.Exporting.Editor
             _platforms = serializedObject.FindProperty("_platforms");
             _content = serializedObject.FindProperty("_content");
             _outputDirectory = serializedObject.FindProperty("_outputDirectory");
+            _thumbnailDirectory = serializedObject.FindProperty("_thumbnailDirectory");
 
             platforms = new FilteredEnumMaskField(typeof(ModPlatform), (int)ModToolSettings.supportedPlatforms);
             content = new FilteredEnumMaskField(typeof(ModContent), (int)ModToolSettings.supportedContent);
@@ -67,6 +69,15 @@ namespace ModTool.Exporting.Editor
                 string selectedDirectory = EditorUtility.SaveFolderPanel("Choose output directory", _outputDirectory.stringValue, "");
                 if (!string.IsNullOrEmpty(selectedDirectory))
                     _outputDirectory.stringValue = selectedDirectory;
+
+                Repaint();
+            }
+
+            if (GUILayout.Button("...", GUILayout.Width(30)))
+            {
+                string selectedDirectory = EditorUtility.SaveFolderPanel("Choose a thumbnail", _thumbnailDirectory.stringValue, "");
+                if (!string.IsNullOrEmpty(selectedDirectory))
+                    _thumbnailDirectory.stringValue = selectedDirectory;
 
                 Repaint();
             }
