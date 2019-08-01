@@ -61,6 +61,11 @@
             The Mod's version.
             </summary>
         </member>
+        <member name="P:ModTool.Exporting.Editor.ExportSettings.thumbnail">
+            <summary>
+            The Mod's thumbnail.
+            </summary>
+        </member>
         <member name="P:ModTool.Exporting.Editor.ExportSettings.platforms">
             <summary>
             The selected platforms for which this mod will be exported.

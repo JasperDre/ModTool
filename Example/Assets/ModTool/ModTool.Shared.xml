@@ -415,6 +415,11 @@
             The version of Unity that was used to export this mod.
             </summary>
         </member>
+        <member name="P:ModTool.Shared.ModInfo.thumbnail">
+            <summary>
+            Filepath to the thumbnail.
+            </summary>
+        </member>
         <member name="P:ModTool.Shared.ModInfo.isEnabled">
             <summary>
             Should this mod be enabled.
@@ -425,7 +430,7 @@
             Location of mod
             </summary>
         </member>
-        <member name="M:ModTool.Shared.ModInfo.#ctor(System.String,System.String,System.String,System.String,System.String,ModTool.Shared.ModPlatform,ModTool.Shared.ModContent)">
+        <member name="M:ModTool.Shared.ModInfo.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,ModTool.Shared.ModPlatform,ModTool.Shared.ModContent)">
             <summary>
             Initialize a new ModInfo.
             </summary>
@@ -435,6 +440,7 @@
             <param name="platforms">The Mod's supported platforms.</param>
             <param name="content">The Mod's available content types.</param>
             <param name="version">The Mod's version</param>
+            <param name="unityVersion"> The Mod's thumbnail.</param>
             <param name="unityVersion"> The version of Unity that the Mod was exported with.</param>
         </member>
         <member name="M:ModTool.Shared.ModInfo.Save">
