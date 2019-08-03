@@ -85,7 +85,18 @@ namespace ModTool.Exporting.Editor
                 return _content;
             }
         }
-        
+
+        /// <summary>
+        /// The directory to the thumbnail file.
+        /// </summary>
+        public string thumbnailDirectory
+        {
+            get
+            {
+                return _thumbnailDirectory;
+            }
+        }
+
         /// <summary>
         /// The directory to which the Mod will be exported.
         /// </summary>
@@ -117,6 +128,9 @@ namespace ModTool.Exporting.Editor
 
         [SerializeField]
         private ModContent _content = (ModContent)(-1);
+
+        [SerializeField]
+        private string _thumbnailDirectory;
 
         [SerializeField]
         private string _outputDirectory;

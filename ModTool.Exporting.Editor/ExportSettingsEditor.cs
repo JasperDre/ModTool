@@ -54,30 +54,32 @@ namespace ModTool.Exporting.Editor
             _content.intValue = content.DoMaskField("Content*:", _content.intValue);
             LogUtility.logLevel = (LogLevel)EditorGUILayout.EnumPopup("Log Level:", LogUtility.logLevel);
 
-            bool enabled = GUI.enabled;
+            GUILayout.Space(5);
 
             GUILayout.BeginHorizontal();
 
-            GUI.enabled = false;
-
-            EditorGUILayout.TextField("Output Directory*:", GetShortString(_outputDirectory.stringValue));
-
-            GUI.enabled = enabled;
-
-            if (GUILayout.Button("...", GUILayout.Width(30)))
-            {
-                string selectedDirectory = EditorUtility.SaveFolderPanel("Choose output directory", _outputDirectory.stringValue, "");
-                if (!string.IsNullOrEmpty(selectedDirectory))
-                    _outputDirectory.stringValue = selectedDirectory;
-
-                Repaint();
-            }
+            EditorGUILayout.TextField("Thumbnail directory:", GetShortString(_thumbnailDirectory.stringValue));
 
             if (GUILayout.Button("...", GUILayout.Width(30)))
             {
                 string selectedDirectory = EditorUtility.SaveFolderPanel("Choose a thumbnail", _thumbnailDirectory.stringValue, "");
                 if (!string.IsNullOrEmpty(selectedDirectory))
                     _thumbnailDirectory.stringValue = selectedDirectory;
+
+                Repaint();
+            }
+
+            GUILayout.EndHorizontal();
+
+            GUILayout.BeginHorizontal();
+
+            EditorGUILayout.TextField("Output Directory*:", GetShortString(_outputDirectory.stringValue));
+
+            if (GUILayout.Button("...", GUILayout.Width(30)))
+            {
+                string selectedDirectory = EditorUtility.SaveFolderPanel("Choose output directory", _outputDirectory.stringValue, "");
+                if (!string.IsNullOrEmpty(selectedDirectory))
+                    _outputDirectory.stringValue = selectedDirectory;
 
                 Repaint();
             }

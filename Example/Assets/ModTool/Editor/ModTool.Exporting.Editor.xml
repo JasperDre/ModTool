@@ -76,6 +76,11 @@
             The selected content types that will be exported.
             </summary>
         </member>
+        <member name="P:ModTool.Exporting.Editor.ExportSettings.thumbnailDirectory">
+            <summary>
+            The directory to the thumbnail file.
+            </summary>
+        </member>
         <member name="P:ModTool.Exporting.Editor.ExportSettings.outputDirectory">
             <summary>
             The directory to which the Mod will be exported.
