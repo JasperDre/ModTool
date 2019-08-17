@@ -26,10 +26,6 @@ namespace ModTool.Exporting.Editor
         {
             "Assembly-CSharp.dll",
             "Assembly-Csharp-firstpass.dll",
-            "Assembly-UnityScript.dll",
-            "Assembly-UnityScript-firstpass.dll"
-            //"Assembly-Boo.dll",
-            //"Assembly-Boo-firstpass.dll"
         };
         
         public bool waitForAssemblyReload { get; private set; }
@@ -438,7 +434,7 @@ namespace ModTool.Exporting.Editor
                 settings.author,
                 settings.description,
                 settings.version,
-                settings.thumbnail,
+                settings.thumbnailDirectory,
                 Application.unityVersion,
                 platforms,
                 data.content);

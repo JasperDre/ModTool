@@ -26,17 +26,12 @@ namespace ModTool.Editor
             serializedObject.Update();
 
             EditorGUILayout.BeginVertical(EditorStyles.helpBox);
-
-            //Note: Bug in inspector does not indent list PropertyField
-            //EditorGUI.indentLevel++;
             
             EditorGUILayout.PropertyField(inheritanceRestrictions, true);
             EditorGUILayout.PropertyField(memberRestrictions, true);
             EditorGUILayout.PropertyField(typeRestrictions, true);
             EditorGUILayout.PropertyField(namespaceRestrictions, true);
             EditorGUILayout.PropertyField(apiAssemblies, true);
-
-            //EditorGUI.indentLevel--;
 
             EditorGUILayout.EndVertical();
 
