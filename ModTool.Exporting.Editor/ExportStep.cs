@@ -434,8 +434,8 @@ namespace ModTool.Exporting.Editor
                 settings.author,
                 settings.description,
                 settings.version,
-                settings.thumbnailDirectory,
                 Application.unityVersion,
+                settings.thumbnailDirectory,
                 platforms,
                 data.content);
 

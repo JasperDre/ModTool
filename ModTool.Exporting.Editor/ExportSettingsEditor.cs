@@ -62,7 +62,7 @@ namespace ModTool.Exporting.Editor
 
             if (GUILayout.Button("...", GUILayout.Width(30)))
             {
-                string selectedDirectory = EditorUtility.SaveFolderPanel("Choose a thumbnail", _thumbnailDirectory.stringValue, "");
+                string selectedDirectory = EditorUtility.SaveFilePanel("Choose a thumbnail", _thumbnailDirectory.stringValue, "", ".png, .jpg");
                 if (!string.IsNullOrEmpty(selectedDirectory))
                     _thumbnailDirectory.stringValue = selectedDirectory;
 
